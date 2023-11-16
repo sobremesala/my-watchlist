@@ -47,6 +47,7 @@ footer {
     height: 100px;
 }
 
+/* 导航栏 */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -70,7 +71,9 @@ nav li a {
 nav li a:hover {
     background-color: #111;
 }
+/**/
 
+/* IMDb 搜索页面的 URL */
 .float-right {
     float: right;
 }
@@ -84,8 +87,10 @@ nav li a:hover {
     border-radius: 5px;
     padding: 3px 5px;
 }
+/**/
 
 /* 覆盖某些浏览器对 input 元素定义的字体 */
+/*两个输入框和提交按钮相关*/
 input[type=submit] {
     font-family: inherit;
 }
@@ -116,6 +121,7 @@ input[name=year] {
     border: 1px solid black;
 }
 
+/* alert 类为提示消息增加样式：*/
 .alert {
     position: relative;
     padding: 7px;
@@ -127,6 +133,7 @@ input[name=year] {
     border-radius: 5px;
 }
 
+/* 让表单中的删除按钮和旁边的编辑链接排成一行 */
 .inline-form {
     display: inline;
 }
