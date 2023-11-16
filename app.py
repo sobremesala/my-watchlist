@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask import request, url_for, redirect, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+
 # 从 flask 包导入 Flask 类，通过实例化这个类，创建一个程序对象 app:
 from markupsafe import escape
 from flask_sqlalchemy import SQLAlchemy  # 导入扩展类
@@ -13,7 +14,8 @@ else:  # 否则使用四个斜线
     prefix = 'sqlite:////'
 
 app = Flask(__name__)
-app.secret_key = '123'
+# app.secret_key = '123'
+app.config['SECRET_KEY'] = 'dev'
 login_manager = LoginManager(app)  # 实例化扩展类
 login_manager.login_view = 'login'
 import os
