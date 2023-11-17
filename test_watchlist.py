@@ -7,6 +7,8 @@ class WatchlistTestCase(unittest.TestCase):
 
     def setUp(self):
         # 更新配置
+        ctx = app.app_context()
+        ctx.push()
         app.config.update(
             TESTING=True,
             SQLALCHEMY_DATABASE_URI='sqlite:///:memory:'
